@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { GameModalPage } from './game-modal.page';
+import { DeckSliderComponent } from './deck-slider.component';
 
-describe('GameModalPage', () => {
-  let component: GameModalPage;
-  let fixture: ComponentFixture<GameModalPage>;
+describe('DeckSliderComponent', () => {
+  let component: DeckSliderComponent;
+  let fixture: ComponentFixture<DeckSliderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GameModalPage ],
+      declarations: [ DeckSliderComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(GameModalPage);
+    fixture = TestBed.createComponent(DeckSliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

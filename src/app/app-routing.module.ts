@@ -15,14 +15,6 @@ const routes: Routes = [
     path: 'pre-game',
     loadChildren: () => import('./pages/pre-game/pre-game.module').then( m => m.PreGamePageModule)
   },
-  {
-    path: 'categories-modal',
-    loadChildren: () => import('./pages/categories-modal/categories-modal.module').then( m => m.CategoriesModalPageModule)
-  },
-  {
-    path: 'game-modal',
-    loadChildren: () => import('./pages/game-modal/game-modal.module').then( m => m.GameModalPageModule)
-  }
 ];
 
 @NgModule({

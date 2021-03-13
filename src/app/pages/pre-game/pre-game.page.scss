@@ -1,7 +1,10 @@
-.container {
-  padding: 25px !important;
+ion-content {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --background: var(--ion-color-custom-white);
 }
-
 
 .header {
   display: flex;
@@ -33,7 +36,25 @@
   height: 50px;
 }
 
-.avatar-selected {
+.board-size-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.board-size-container h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+}
+
+
+.item-selected {
+  background: #4c8dff52;
   border: 3px solid var( --ion-color-primary );     
 }
 

@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+ion-content {
+  --background: var(--ion-color-custom-white);
+}
+
 .title {
   @include flexCenter();
 
@@ -31,6 +35,7 @@
   height: 138px;
   width: 140px;
   border-radius: 25px;
+  box-shadow: 4px 4px 10px 4px #ccc;
 }
 
 .categories-btn {
@@ -40,6 +45,7 @@
   height: 138px;
   width: 140px;
   border-radius: 25px;
+  box-shadow: 4px 4px 10px 4px #ccc;
 }
 
 
@@ -78,6 +84,22 @@
   align-items: center;
   text-align: center;
 
-  height: 150px;
+  height: 100px;
   padding: 20px;
+  border-radius: 25px;
+  margin: 50px 20px;
+
+  box-shadow: 4px 4px 10px 4px #ccc;
+}
+
+ion-list {
+  background: var( --ion-color-custom-white );
+}
+
+ion-item {
+  margin: 8px 0px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 4px 0px #ccc;
+  --background: white !important;
+  margin: 10px 30px;
 }
