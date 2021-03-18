@@ -1,0 +1,25 @@
+<div 
+  class="container"
+  [ngStyle]="{ 'height': imageHeight( boardSize ), width : imageWith  ( boardSize ) }"
+>
+  <div [ngClass]="flipped ? 'flipped' : ''" class="card">
+    <div 
+      class="front"
+      [ngStyle]="{ 'height': imageHeight( boardSize ), width : imageWith  ( boardSize ) }"
+      (click)="cardTouched()"
+    >
+      <img
+        [ngStyle]="{ 'height': imageHeight( boardSize ), width : imageWith  ( boardSize ) }"
+        [src]="img">
+    </div>
+    <div
+      class="back"
+      [ngStyle]="{ 'height': imageHeight( boardSize ), width : imageWith  ( boardSize ) }"
+      (click)="cardTouched()"
+    >
+      <img
+        [ngStyle]="{ 'height': imageHeight( boardSize ), width : imageWith  ( boardSize ) }"
+        src="./assets/img/back-card.jpg">
+    </div>
+  </div>
+</div>

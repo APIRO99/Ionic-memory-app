@@ -1,0 +1,76 @@
+{
+  "decks": [
+    {
+      "id": 0,
+      "title": "Kimetsu No Yaiba",
+      "photos": [
+        "./assets/img/KNY/1.jpg", 
+        "./assets/img/KNY/2.jpg",
+        "./assets/img/KNY/3.jpg", 
+        "./assets/img/KNY/4.jpg",
+        "./assets/img/KNY/5.jpg", 
+        "./assets/img/KNY/6.jpg",
+        "./assets/img/KNY/7.jpg", 
+        "./assets/img/KNY/8.jpg",
+        "./assets/img/KNY/9.jpg", 
+        "./assets/img/KNY/10.jpg", 
+        "./assets/img/KNY/11.jpg",
+        "./assets/img/KNY/12.jpg", 
+        "./assets/img/KNY/13.jpg",
+        "./assets/img/KNY/14.jpg", 
+        "./assets/img/KNY/15.jpg",
+        "./assets/img/KNY/16.jpg", 
+        "./assets/img/KNY/17.jpg",
+        "./assets/img/KNY/18.jpg"
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Boku No Hero Academia",
+      "photos": [
+        "./assets/img/BNHA/1.jpg", 
+        "./assets/img/BNHA/2.jpg",
+        "./assets/img/BNHA/3.jpg", 
+        "./assets/img/BNHA/4.jpg",
+        "./assets/img/BNHA/5.jpg", 
+        "./assets/img/BNHA/6.jpg",
+        "./assets/img/BNHA/7.jpg", 
+        "./assets/img/BNHA/8.jpg",
+        "./assets/img/BNHA/9.jpg", 
+        "./assets/img/BNHA/10.jpg", 
+        "./assets/img/BNHA/11.jpg",
+        "./assets/img/BNHA/12.jpg", 
+        "./assets/img/BNHA/13.jpg",
+        "./assets/img/BNHA/14.jpg", 
+        "./assets/img/BNHA/15.jpg",
+        "./assets/img/BNHA/16.jpg", 
+        "./assets/img/BNHA/17.jpg",
+        "./assets/img/BNHA/18.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Re Zero",
+      "photos": [
+        "./assets/img/reZero/1.jpg", 
+        "./assets/img/reZero/2.jpg",
+        "./assets/img/reZero/3.jpg", 
+        "./assets/img/reZero/4.jpg",
+        "./assets/img/reZero/5.jpg", 
+        "./assets/img/reZero/6.jpg",
+        "./assets/img/reZero/7.jpg", 
+        "./assets/img/reZero/8.jpg",
+        "./assets/img/reZero/9.jpg", 
+        "./assets/img/reZero/10.jpg", 
+        "./assets/img/reZero/11.jpg",
+        "./assets/img/reZero/12.jpg", 
+        "./assets/img/reZero/13.jpg",
+        "./assets/img/reZero/14.jpg", 
+        "./assets/img/reZero/15.jpg",
+        "./assets/img/reZero/16.jpg", 
+        "./assets/img/reZero/17.jpg",
+        "./assets/img/reZero/18.jpg"
+      ]
+    }
+  ]
+}

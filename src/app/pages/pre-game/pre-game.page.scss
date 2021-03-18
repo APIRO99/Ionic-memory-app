@@ -6,6 +6,20 @@ ion-content {
   --background: var(--ion-color-custom-white);
 }
 
+ion-item {
+  margin: 10px 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #ccc;
+}
+
+h2 {
+  margin: 30px 0px 10px 7px;
+}
+
+.slider-container {
+  margin: 20px 0PX;
+}
+
 .header {
   display: flex;
   align-items: center;
@@ -20,7 +34,15 @@ ion-content {
 }
 
 .avatar-section {
-  margin: 40px 0px;
+  background: white;
+  margin: 0px 5px;
+  height: 150px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #ccc;
 }
 
 .avatars-container {
@@ -40,9 +62,10 @@ ion-content {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  background: white;
 }
 
-.board-size-container h2 {
+.board-size-container h3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,3 +106,38 @@ ion-content {
   font-style: normal;
   font-weight: bold;
 }
+
+// ************** DECKS *******************
+
+.deck-container {
+  background: white;
+  // margin: 10px 5px;
+  height: 180px;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #ccc;
+}
+
+.slider-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-title h3 {
+  margin: 0px 0px 15px 10px;
+  padding-top: 5px;
+}
+
+.slider-title  ion-radio {
+  margin: 10px 15px 0px 0px;
+}
+
+.container ion-slides img {
+  width: 85px;
+  height: 120px;
+  object-fit: fill;
+
+  border-radius: 25px;
+}
+
+// ****************************************

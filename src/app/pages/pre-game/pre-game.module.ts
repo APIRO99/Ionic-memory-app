@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PreGamePageRoutingModule } from './pre-game-routing.module';
 
 import { PreGamePage } from './pre-game.page';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PreGamePageRoutingModule
+    PreGamePageRoutingModule,
+    ComponentsModule
   ],
   declarations: [PreGamePage]
 })

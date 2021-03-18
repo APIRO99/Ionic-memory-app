@@ -7,7 +7,7 @@ export interface Deck {
 export interface Game {
   id: number;
   time: number;
-  errors: number;
+  moves: number;
   avatar: string;
   userId: string;
   boardSize: number;

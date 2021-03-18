@@ -2,7 +2,7 @@
   <h2 class="title">Memory App</h2>
   <div class="btn-container">
     <div class="new-game-btn" (click)="goToPreGame()"><p>Start new game</p></div>
-    <div class="categories-btn" (click)="goToCategories()"><p>See memory decks</p></div>
+    <div class="categories-btn" (click)="goToCategories()"><p>See decks</p></div>
   </div>
   <h3 class="subtitle">Top Games</h3>
   <h4 class="play_games-message" *ngIf="displayPlayGamesMessages()">Play some games and the best scores will apear here!!</h4>
@@ -20,9 +20,8 @@
       </ion-label>
       <ion-label slot="end" class="ion-text-end">
         <p>Time:  {{  game.time  }}s</p>
-        <p>Errors:  {{  game.errors  }}</p>
+        <p>Moves:  {{  game.moves  }}</p>
       </ion-label>
     </ion-item>
   </ion-list>
-
 </ion-content>

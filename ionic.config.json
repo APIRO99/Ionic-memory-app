@@ -1,5 +1,7 @@
 {
   "name": "trivia-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

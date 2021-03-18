@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController } from '@ionic/angular';
 import { Deck } from 'src/app/interfaces';
+import { DataService } from 'src/app/services/data.service';
+import { GamePage } from '../game/game.page';
 
 @Component({
   selector: 'app-pre-game',
@@ -18,11 +20,11 @@ export class PreGamePage implements OnInit {
   
   constructor(
     private modalCtrl: ModalController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private dataService: DataService
   ) { }
   async ngOnInit() {
-    // const res = this.dataService.getDecks();
-    // this.decks = res.list;
+    this.decks = (await this.dataService.getDecks()).decks;
   }
 
   selectDeck = (id) => this.deckid = id;
@@ -31,22 +33,21 @@ export class PreGamePage implements OnInit {
 
   setSize = (size) => this.boardSize = size;
   
-  // startGame = async () => {
+  startGame = async () => {
+    console.log( this.user, this.avatar, this.boardSize, this.deckid );
     
-  //   if (! (this.user && this.avatar && this.category ))
-  //     return await this.presentAlert('Missing values!', 'Please enter all values before begin')
-
-
-
-  //   let res = await this.dataService.getQuestions(this.category);
-
-  //   if (res.response_code === 0) {
-  //     console.log(this.user, this.avatar, this.category);
-  //     await this.presentModal(res.results, this.user, this.avatar, this.findCategory(this.category))
-  //   } else {
-  //     await this.presentAlert('Oppps!', 'Something went wrong, please try again')
-  //   }
-  // }
+    if (! (this.user && this.avatar && this.boardSize ))
+      if( !( this.deckid < 0 ))
+        return await this.presentAlert('Missing values!', 'Please enter all values before begin');
+      
+    const gameData = { 
+      user:      this.user,
+      avatar:    this.avatar, 
+      boardSize: this.boardSize, 
+      deck:      this.decks[this.deckid]
+    };
+    await this.presentModal(gameData);
+  }
 
   async presentAlert(header, message) {
     const alert = await this.alertCtrl.create({
@@ -55,13 +56,18 @@ export class PreGamePage implements OnInit {
     await alert.present();
   }
 
+  slideOpts = {
+    slidesPerView: 3.8,
+    freeMode: true
+  };
 
-  // async presentModal(questions, user, avatar, category) {
-  //   const modal = await this.modalCtrl.create({
-  //     component: GameModalPage,
-  //     cssClass: 'my-custom-class',
-  //     componentProps: { questions, user, avatar, category }
-  //   });
-  //   return modal.present();
-  // }
+
+  async presentModal(game) {
+    const modal = await this.modalCtrl.create({
+      component: GamePage,
+      cssClass: 'my-custom-class',
+      componentProps: { game }
+    });
+    return modal.present();
+  }
 }

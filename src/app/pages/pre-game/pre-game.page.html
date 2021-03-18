@@ -7,50 +7,66 @@
       <h1 class="title">New Game</h1>
     </div>
     <ion-item lines="none">
-      <ion-label position="fixed">ID: </ion-label>
+      <ion-label>ID: </ion-label>
       <ion-input [(ngModel)]="user"></ion-input>
     </ion-item>
-    <ion-item lines="none" class="boardSizeboardSize">
+    <ion-item lines="none" class="sizeboard">
       <ion-label position="fixed">Board Size: </ion-label>
       <div class="board-size-container">
-        <h2
-          *ngFor="let size of board_sizes"
-          [ngClass]="{'item-selected': this.boardSize ==  size }"
-          (click)="setSize(size)"
-          class="avatar-selected">
-          {{ size }}
-        </h2>
+        <h3
+        *ngFor="let size of board_sizes"
+        [ngClass]="{'item-selected': this.boardSize ==  size }"
+        (click)="setSize(size)"
+        class="avatar-selected">
+        {{ size }}
+        </h3>
       </div>
     </ion-item>
+    <h2>Select an avatar: </h2>
     <div class="avatar-section">
-      <h2>Select an avatar</h2>
       <div class="avatars-container">
         <ion-avatar 
           class="avatar"
           *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12]"
           [ngClass]="{'item-selected': this.avatar ==  i }"
           (click)="selectAvatar(i)">
-          <img [src]="'./assets/avatars/av' + i + '.jpg'" />
+          <img [src]="'./assets/img/avatars/av' + i + '.jpg'" />
         </ion-avatar>
       </div>
     </div>
 
-    <!-- <h2>Choose a deck</h2>
-    <div class="categories-container" *ngIf="categories">
-      <ion-chip 
-        *ngFor="let item of categories"
-        (click)="selectCategory(item.id)"
-        color="primary" 
-        mode="ios"
-        outline="true">
-        <ion-label>{{  item.title }}</ion-label>
-      </ion-chip>
-    </div> -->
+    <h2>Select a deck:</h2>
+    <ion-list>
+      <ion-radio-group [(ngModel)]="deckid">
+        <div
+          class="slider-container"
+          *ngFor="let deck of decks">
+        <div class="deck-container">
+          
+          <div class="slider-title">
+            <h3>{{  deck.title }}</h3>
+            <ion-radio [value]="deck.id"></ion-radio>
+          </div>
+          
+          <ion-slides pager="false" [options]="slideOpts">
+            <ion-slide *ngFor="let imgUrl of deck.photos">
+              <img [src]="imgUrl">
+            </ion-slide>
+          </ion-slides>
 
-    <!-- <div
+        </div>
+      </div> 
+
+      </ion-radio-group>
+    </ion-list>
+
+
+
+
+    <div
       (click)="startGame()"
       class="start-btn">
       <h3>Start Game!</h3>
-    </div> -->
+    </div>
   </div>
 </ion-content>

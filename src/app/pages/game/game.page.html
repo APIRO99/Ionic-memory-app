@@ -1,0 +1,35 @@
+<ion-content>
+  <div class="container">
+    <div class="header">
+      <div class="user-card">
+        <img [src]="'./assets/img/avatars/av' + game.avatar + '.jpg'" alt="User Avatar">
+        <p>{{  game.user  }}</p>
+      </div>
+      <div class="countDown">
+        <p>Time:  {{  time  }}</p>
+        <p>Moves: {{  moves  }}</p>
+      </div>
+    </div>
+
+    <div class="title">
+      {{ game.deck.title }}
+    </div>
+    <div class="board">
+      <div *ngFor="let row of game.deck.photos | boardSort:this.game.boardSize">
+        <div
+          [ngStyle]="{ 'margin': imageMargin( game.boardSize ) }"
+          class="row"
+        >
+          <flip-card
+            *ngFor="let item of row"
+            [flipped]="item.flipped"
+            [img]="item.img"
+            [boardSize]="game.boardSize"
+            (clicked)="handleMove(item)"
+            >
+          </flip-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
